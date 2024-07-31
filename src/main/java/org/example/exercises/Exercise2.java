@@ -1,6 +1,7 @@
 package org.example.exercises;
 
 import javax.sound.midi.Soundbank;
+import java.sql.SQLOutput;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -24,8 +25,9 @@ public class Exercise2  {
                     continue;
                 }
 
-                if (output[0] < 0)
-                    throw new NegativeIntegerInputException(output[0]);
+                if (output[0] < 0) {
+                    System.out.println("This operation does not accept negative values. Please try again.");
+                }
             }
                     catch(NumberFormatException e) {
                         System.out.println("Invalid input. Please try again.");
@@ -39,8 +41,9 @@ public class Exercise2  {
                     continue;
                 }
 
-                if (output[1] < 0)
-                    throw new NegativeIntegerInputException(output[1]);
+                if (output[1] < 0) {
+                    System.out.println("This operation does not accept negative values. Please try again.");
+                }
             }
             catch(NumberFormatException e) {
                 System.out.println("Invalid input. Please try again.");

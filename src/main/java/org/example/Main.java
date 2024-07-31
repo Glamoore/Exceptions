@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.exercises.Exercise3;
+import org.example.exercises.NegativeIntegerInputException;
 
 import java.util.Scanner;
 

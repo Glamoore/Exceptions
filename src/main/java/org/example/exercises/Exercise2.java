@@ -23,6 +23,9 @@ public class Exercise2  {
                     System.out.println("Cannot divide by zero. Please try again.");
                     continue;
                 }
+
+                if (output[0] < 0)
+                    throw new NegativeIntegerInputException(output[0]);
             }
                     catch(NumberFormatException e) {
                         System.out.println("Invalid input. Please try again.");
@@ -35,6 +38,9 @@ public class Exercise2  {
                     System.out.println("Cannot divide by zero. Please try again.");
                     continue;
                 }
+
+                if (output[1] < 0)
+                    throw new NegativeIntegerInputException(output[1]);
             }
             catch(NumberFormatException e) {
                 System.out.println("Invalid input. Please try again.");

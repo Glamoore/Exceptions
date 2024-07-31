@@ -1,5 +1,6 @@
 package org.example.exercises;
 
+import javax.sound.midi.Soundbank;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -17,6 +18,11 @@ public class Exercise2  {
             dividend = input.nextLine();
             try {
                 output[0] = Integer.parseInt(divisor);
+
+                if (output[0] == 0) {
+                    System.out.println("Cannot divide by zero. Please try again.");
+                    continue;
+                }
             }
                     catch(NumberFormatException e) {
                         System.out.println("Invalid input. Please try again.");
@@ -24,6 +30,11 @@ public class Exercise2  {
             }
             try {
                 output[1] = Integer.parseInt(dividend);
+
+                if (output[1] == 0) {
+                    System.out.println("Cannot divide by zero. Please try again.");
+                    continue;
+                }
             }
             catch(NumberFormatException e) {
                 System.out.println("Invalid input. Please try again.");
